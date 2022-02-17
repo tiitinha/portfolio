@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaStackOverflow } from 'react-icons/fa';
 
 import Footer from '../components/Footer';
 
@@ -32,6 +32,7 @@ const IndexPage = () => {
 
     const githubLink = 'https://github.com/tiitinha';
     const LinkedinLink = 'https://linkedin.com/harritiitinen';
+    const StackLink = 'https://stackoverflow.com/users/13194980/tiitinha';
 
     return (
         <main style={pageStyles}>
@@ -44,6 +45,11 @@ const IndexPage = () => {
                 <ImgDiv>
                     <Link to={LinkedinLink}>
                         <FaGithub size={32} />
+                    </Link>
+                </ImgDiv>
+                <ImgDiv>
+                    <Link to={StackLink}>
+                        <FaStackOverflow size={32} />
                     </Link>
                 </ImgDiv>
             </ContactDetails>
