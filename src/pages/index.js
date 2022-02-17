@@ -1,20 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
-import GithubImg from '../images/GitHub-Mark/PNG/GitHub-Mark-32px.png';
-import LinkedInImg from '../images/LinkedIn-Logos/LI-In-Bug.png';
+import Footer from '../components/Footer';
 
 const ContactDetails = styled.div`
     height: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
-`
+`;
 
 const ImgDiv = styled.div`
-    padding: 10px;
-`
+    padding: 2px;
+`;
+
+const Header = styled.h1`
+    justify-content: center;
+    text-align: center;
+`;
 
 const pageStyles = {
     color: "#232129",
@@ -33,18 +38,18 @@ const IndexPage = () => {
             <ContactDetails>
                 <ImgDiv>
                     <Link to={githubLink}>
-                        <img src={GithubImg} className='githubIcon' />
+                        <FaLinkedin size={32}/>
                     </Link>
                 </ImgDiv>
                 <ImgDiv>
                     <Link to={LinkedinLink}>
-                        <img width='32' src={LinkedInImg} className='liIcon' />
+                        <FaGithub size={32} />
                     </Link>
                 </ImgDiv>
             </ContactDetails>
             <title>Harri Tiitinen</title>
-            <h1>Harri Tiitinen</h1>
-            <h2>CV</h2>
+            <Header>Harri Tiitinen</Header>
+            <Footer />
         </main>
     )
 }
